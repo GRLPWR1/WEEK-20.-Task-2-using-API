@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+    <h1>Working with API</h1>
+    <h2>Images from NASA's Earth Polychromatic Imaging Camera</h2>
+    <img src="" id="EPIC" alt="NASA's picture of the Earth" />
+    <p id="caption"></p>
+    <div class="container"></div>
+    <script>
+      fetch(
+      "https://api.nasa.gov/EPIC/api/natural/images?api_key=qmAgIcJbOIj4TkGNh7ejkKR7JljbwEoatb2w0X0c"
+      );
+          .then((responce) => responce.json());
+          .then((epic) => {
+          document.getElementById("EPIC");
+          });
+          .catch(error => console.log(error));
+    </script>
+  </body>
+</html>
