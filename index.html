@@ -8,18 +8,9 @@
   </head>
   <body>
     <h1>Working with API</h1>
-    <h2>The Art Institute of Chicago proudly presents</h2>
+    <h2 id="title"></h2>
     <img src="" id="artwork" alt="artwork" />
     <p id="caption"></p>
-    <script>
-      fetch("https://api.artic.edu/api/v1/artworks/129884")
-        .then((responce) => responce.json())
-        .then((image) => {
-          document.getElementById("artwork").src = image.129884_url;
-          document.getElementById("caption").innerText =
-            image.suggest_autocomplete_boosted;
-        })
-        .catch((error) => console.log(error));
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
